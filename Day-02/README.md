@@ -1,74 +1,262 @@
-# 🐍 Day 01 — Python Fundamentals
+# 🐍 Day 02 — Data Types, Mathematical Operations & Tip Calculator
 
-Day 1 of my 100 Days of Python journey.
-The focus of Day 1 is learning the fundamental building blocks of Python programming.
+Day 2 of my **100 Days of Python** journey.
+
+Today I focused on understanding Python's basic data types, type conversion, mathematical operations, number manipulation, and formatted output.
 
 ## 📚 Topics Covered
-1. Print statements
-2. Comments
-3. Strings
-4. String concatenation
-5. String methods
-6. `len()` function
-7. Variables
-8. Variable naming
-9. User input
-10. Data types
-11. Arithmetic operators
-12. Type conversion
-13. F-strings
-14. Escape characters
-15. Basic debugging
-16. Mini Project — Personal Introduction Generator
+
+* Primitive data types
+* Type checking
+* Type conversion
+* Type errors
+* Arithmetic operators
+* Operator precedence
+* Augmented assignment operators
+* Number manipulation
+* Rounding numbers
+* F-strings
+* Number formatting
+* User input and calculations
+* Building a Tip Calculator
 
 ## 🧠 Concepts Learned
 
-### Basic Python
-* `print()`
-* Comments
-* Variables
-* Naming conventions
+### 1. Primitive Data Types
 
-### Strings
-* String creation
-* String indexing
-* Concatenation
-* String methods
-* F-strings
-* Escape characters
+```python
+str
+int
+float
+bool
+```
 
-### Data
-* `str`
-* `int`
-* `float`
-* `bool`
-* `type()`
-* Type conversion
+Examples:
 
-### User Interaction
-* `input()`
-* Converting user input into numbers
+```python
+name = "Mohamed"
+age = 32
+height = 175.5
+is_learning = True
+```
 
-### Operators
-* Addition
-* Subtraction
-* Multiplication
-* Division
-* Floor division
-* Modulus
-* Exponentiation
+### 2. Type Checking
 
-### Debugging
-* Reading error messages
-* Identifying common beginner errors
-* Understanding line numbers and error types
+Used `type()` to identify the data type of a value.
 
-## 🚀 Mini Project
+```python
+print(type(age))
+```
 
-### Personal Introduction Generator
-A simple interactive Python program that collects information from the user and generates a personalized introduction.
+### 3. Type Conversion
 
-## 🎯 Day 1 Goal
-Build a strong foundation in Python syntax, variables, strings, input, data types, and basic operations before moving to more advanced concepts.
+Learned how to convert values between different data types.
 
-**Status:** ✅ Completed
+```python
+int()
+float()
+str()
+```
+
+Example:
+
+```python
+age = int("32")
+price = float("99.99")
+score = str(95)
+```
+
+### 4. Type Errors
+
+Learned why Python cannot directly combine incompatible data types.
+
+```python
+age = 32
+
+# This causes a TypeError:
+# print("Age: " + age)
+```
+
+Correct approach:
+
+```python
+print(f"Age: {age}")
+```
+
+### 5. Mathematical Operations
+
+Practiced:
+
+```text
++     Addition
+-     Subtraction
+*     Multiplication
+/     Division
+//    Floor Division
+%     Modulus
+**    Exponentiation
+```
+
+### 6. Operator Precedence
+
+Learned how Python determines the order of mathematical operations and how parentheses can change that order.
+
+```python
+result = 10 + 5 * 2
+result = (10 + 5) * 2
+```
+
+### 7. Augmented Assignment
+
+Learned shorthand assignment operators:
+
+```python
+score += 10
+score -= 5
+score *= 2
+score /= 2
+```
+
+### 8. Number Manipulation
+
+Practiced modifying and calculating values using variables and arithmetic operators.
+
+### 9. Rounding Numbers
+
+Learned how to round numerical values.
+
+```python
+round(99.9876, 2)
+```
+
+### 10. F-Strings
+
+Learned how to insert variables and expressions directly into strings.
+
+```python
+name = "Mohamed"
+age = 32
+
+print(f"My name is {name} and I am {age} years old.")
+```
+
+### 11. Number Formatting
+
+Learned how to control decimal places when displaying numbers.
+
+```python
+price = 99.9876
+
+print(f"₹{price:.2f}")
+```
+
+Output:
+
+```text
+₹99.99
+```
+
+### 12. User Input and Calculations
+
+Learned how to collect information from users and convert the input into the appropriate data type.
+
+```python
+age = int(input("How old are you? "))
+```
+
+## 🚀 Main Project — Tip Calculator
+
+Built an interactive Tip Calculator that:
+
+* Accepts the total bill
+* Accepts the tip percentage
+* Accepts the number of people
+* Calculates the tip amount
+* Calculates the total bill
+* Splits the bill between people
+* Displays the final amount with two decimal places
+
+### Formula
+
+```text
+Tip Amount = Bill × Tip Percentage ÷ 100
+
+Total Bill = Bill + Tip Amount
+
+Amount Per Person = Total Bill ÷ Number of People
+```
+
+## 🧪 Extra Practice — Shopping Bill Calculator
+
+Created an additional practice project to reinforce Day 2 concepts.
+
+The program:
+
+* Accepts product name
+* Accepts product price
+* Accepts quantity
+* Accepts discount percentage
+* Calculates subtotal
+* Calculates discount amount
+* Calculates final price
+* Formats the final result to two decimal places
+
+## 📁 Files
+
+```text
+Day-02/
+│
+├── 01_primitive_data_types.py
+├── 02_type_checking.py
+├── 03_type_conversion.py
+├── 04_type_errors.py
+├── 05_arithmetic_operators.py
+├── 06_operator_precedence.py
+├── 07_augmented_assignment.py
+├── 08_number_manipulation.py
+├── 09_rounding_numbers.py
+├── 10_f_strings.py
+├── 11_number_formatting.py
+├── 12_user_input_calculations.py
+├── 13_tip_calculator_logic.py
+├── 14_tip_calculator.py
+├── 15_shopping_bill_challenge.py
+```
+
+## 🎯 Day 2 Learning Outcome
+
+By the end of Day 2, I can:
+
+* Identify basic Python data types
+* Check data types using `type()`
+* Convert values between data types
+* Understand and troubleshoot basic type errors
+* Perform mathematical calculations
+* Understand operator precedence
+* Use augmented assignment operators
+* Round and format numbers
+* Use f-strings
+* Work with user input
+* Build simple calculation-based programs
+
+## 📈 Progress
+
+**100 Days of Python**
+
+* Day 01 — ✅ Completed
+* Day 02 — ✅ Completed
+* Day 03 — ⬜ Next
+
+**Progress: 2 / 100 days**
+
+---
+
+### Course
+
+**100 Days of Code — The Complete Python Pro Bootcamp**
+
+Instructor: Angela Yu
+
+### Status
+
+🟢 **Day 2 Completed**
